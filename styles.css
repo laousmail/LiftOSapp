@@ -1,0 +1,52 @@
+:root{--bg:#0E0F11;--panel:#181A1E;--field:#2A2D33;--mute:#A8A59E;--text:#F2EFE9;--lime:#D4FF3A;--red:#FF6B5B}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+#app{max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 16px) 16px calc(96px + env(safe-area-inset-bottom))}
+h1{font-size:24px;margin:0;letter-spacing:-.5px}
+h2{font-size:12px;font-weight:600;margin:0 0 8px;color:var(--mute)}
+h3{font-size:17px;margin:0}
+.big{font-size:30px;font-weight:700;letter-spacing:-1px;line-height:1.1}
+.num{font-size:34px;font-weight:700}
+.lime{color:var(--lime)}.mute{color:var(--mute)}.small{font-size:13px}.red{color:var(--red)}
+.top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.gap{display:flex;flex-direction:column;gap:10px}
+.cols{display:flex;gap:14px}.cols>*{flex:1}
+.card{background:var(--panel);border-radius:18px;padding:16px;margin-bottom:14px}
+.hero{background:var(--lime);color:var(--bg)}
+.hero h2{color:var(--bg)}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;border:0;border-radius:12px;background:var(--lime);color:var(--bg);font:700 16px -apple-system,system-ui,sans-serif;cursor:pointer;padding:0 14px;margin-top:10px}
+.hero .btn{background:var(--bg);color:var(--lime)}
+.btn.ghost{background:transparent;border:1.5px solid var(--lime);color:var(--lime)}
+.btn.dim{background:var(--field);color:var(--text)}
+.btn.danger{background:transparent;border:1.5px solid var(--red);color:var(--red)}
+.btn.sm{min-height:40px;width:auto;margin-top:0;font-size:14px}
+.link{background:none;border:0;color:var(--lime);font:600 15px -apple-system,system-ui,sans-serif;padding:8px 0;cursor:pointer;text-align:left}
+.x{background:none;border:0;color:var(--mute);font-size:22px;min-width:44px;min-height:44px;cursor:pointer}
+input,select,textarea{width:100%;min-height:44px;border:0;border-radius:10px;background:var(--field);color:var(--text);font:16px -apple-system,system-ui,sans-serif;padding:10px 12px}
+textarea{min-height:110px;resize:vertical}
+input[type=date]{min-width:0}
+label{display:block;font-size:13px;color:var(--mute);margin:8px 0 4px}
+form.inline{display:flex;gap:8px;align-items:center;margin-top:10px}
+form.inline .btn{width:auto;margin:0;min-height:44px}
+.set{display:grid;grid-template-columns:28px 1fr 84px 70px;gap:8px;align-items:center;margin-top:8px}
+.set input{text-align:center;font-weight:700;font-size:18px}
+.set input::placeholder{color:#6d6b66}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{background:var(--field);color:var(--text);border:0;border-radius:999px;padding:10px 14px;font:14px -apple-system,system-ui,sans-serif;min-height:40px;cursor:pointer}
+.bar{height:10px;border-radius:5px;background:var(--field);overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--lime)}
+.chart{width:100%;height:auto;display:block}
+.item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--field)}
+.item:first-of-type{border-top:0}
+.tag{display:inline-block;font-size:11px;font-weight:700;background:var(--lime);color:var(--bg);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+pre.report{white-space:pre-wrap;word-break:break-word;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--field);padding:14px;border-radius:12px;margin:10px 0 0}
+#tabs{position:fixed;left:0;right:0;bottom:0;display:flex;background:rgba(14,15,17,.96);border-top:1px solid var(--field);padding-bottom:env(safe-area-inset-bottom);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+#tabs button{flex:1;min-height:56px;background:none;border:0;color:var(--mute);font:600 13px -apple-system,system-ui,sans-serif;cursor:pointer}
+#tabs button.on{color:var(--lime)}
+:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+@media print{
+  body *{visibility:hidden}
+  pre.report,pre.report *{visibility:visible}
+  pre.report{position:absolute;left:0;top:0;width:100%;background:#fff;color:#000}
+}
